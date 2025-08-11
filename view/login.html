@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+  <link rel="stylesheet" href="loginpage.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Login</h2>
+    <form method="post" action="/login">
+      <input id="name" type="text" placeholder="enter name" name="name"  /><br>
+      <input id="hidden" type="password" placeholder="Password"name="password"  /><br>
+      <button type="submit">Login</button>
+          <p>Don't have an account? <a href="/signup">Signup</a></p>
+    </form>
+
+  </div>
+  <script>
+  const nameInput = document.getElementById("name");
+  const passwordInput = document.getElementById("hidden");
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", (event) => {
+    if (!nameInput.value || !passwordInput.value) {
+      alert("Enter your name and password");
+      event.preventDefault(); 
+    }
+  });
+</script>
+
+</body>
+</html>

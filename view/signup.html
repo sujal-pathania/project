@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+    
+</head>
+<body>
+    <form method="POST" action="/signup">
+        <h1>Sign Up page</h1>
+      <input id="name" type="text" placeholder=" first name" name="name"/><br>
+      <input id="username" type="text" placeholder="last name " name="text"/><br>
+      <input id="phone" type="tel" type="phone" name="number" placeholder="phone number">
+      <input id="password" type="password" placeholder="Password" name="password"/><br>
+      <input id="confirm" type="password" placeholder="confirm password"  name="confirm" ><br>
+      <button id="btn" type="submit">Sign Up</button><br>
+       <p>Already have an account? <a href="/login">Login</a></p>
+    </form>
+
+    <script>
+        const name=document.getElementById("name");
+        const username=document.getElementById("username");
+        const phone=document.getElementById("phone");
+        const password=document.getElementById("password");
+        const button=document.getElementById("btn");
+       const confirm=document.getElementById('confirm');
+
+        button.addEventListener('click',(e)=>{
+       e.preventDefault()
+  if(!name.value || !username.value || !phone.value || !password.value || !confirm.value){
+    alert("Please fill all the details")
+  }
+  if (password.value !== confirm.value) {
+        alert("password does not match")
+      }
+       let data={
+        name:name.value,
+        username:username.value,
+        password:password.value,
+        confirm:confirm.value,
+       }
+       fetch('/signup',{
+        method:"POST",
+        headers:{
+            'content-type':'application/json'
+        },
+        body:JSON.stringify(data)
+       })
+        })
+    </script>
+</body>
+</html>

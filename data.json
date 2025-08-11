@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Anurag",
+    "text": "Sharma",
+    "number": "8699949187",
+    "password": "Anu@281610",
+    "confirm": "Anu@281610"
+  },
+  {
+    "name": "Agam",
+    "text": "Girdhar ",
+    "number": "6239184854",
+    "password": "AgamSujal",
+    "confirm": "AgamSujal"
+  },
+  {
+    "name": "Jia",
+    "text": "Guleria ",
+    "number": "8091100130",
+    "password": "reetika2007",
+    "confirm": "reetika2007"
+  },
+  {
+    "name": "",
+    "text": "",
+    "number": "",
+    "password": "",
+    "confirm": ""
+  }
+]
